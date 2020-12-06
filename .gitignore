@@ -26,6 +26,3 @@ coverage*
 
 # CLang-Tidy static analyzer temporary files & folders
 .clang-format
-
-# Assembler files
-*ass

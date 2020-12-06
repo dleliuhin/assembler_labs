@@ -3,7 +3,7 @@
 INCLUDE_DIRECTORIES( cfg )
 
 set( CFG
-    cfg/assembler_labs.cfg
+    cfg/assembler_labs.pli
     cfg/sanalyzer.cfg
    )
 
