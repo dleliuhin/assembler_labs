@@ -24,13 +24,18 @@ include( ${CMAKE_CURRENT_SOURCE_DIR}/src/src.cmake )
 
 #========================================================================================
 
+find_package( Curses REQUIRED )
+include_directories( ${CURSES_INCLUDE_DIR} )
+
+#========================================================================================
+
 add_executable( MAIN_1 src/main_1.c )
 add_executable( MAIN_2 src/main_2.c )
 add_executable( MAIN_3 src/main_3.c )
 
 target_link_libraries( MAIN_1 )
 target_link_libraries( MAIN_2 )
-target_link_libraries( MAIN_3 )
+target_link_libraries( MAIN_3 ${CURSES_LIBRARIES} -lncurses )
 
 #========================================================================================
 
