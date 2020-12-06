@@ -1,4 +1,4 @@
-# cservice_template
+# assembler_labs
 
 [[Build status](http://bamboo.niias/browse/TOOL-CSERVICEBUILD/latest)]
 [[Tests status](http://bamboo.niias/browse/TOOL-CSERVICEBUILD/test)]
@@ -7,7 +7,7 @@
 
 Service for ...
 
-**cservice_template** is the software designed for ... It is developed based on C++17 and provides easy-to-use API. With **cservice_template**, users can quickly connect to ..., receive ... data and transmit decision via ....
+**assembler_labs** is the software designed for ... It is developed based on C++17 and provides easy-to-use API. With **assembler_labs**, users can quickly connect to ..., receive ... data and transmit decision via ....
 
 ---
 
@@ -70,7 +70,7 @@ The installation procedures in Linux Ubuntu 16.04/14.04 32-bit LTS or Linux Mint
 Make changes according to task in [configuration file](./cfg).
 
 ```
-cd cservice_template
+cd assembler_labs
 git checkout release
 ```
 Without [visualization](./doc/README.md): ```./scripts/build.sh``` <br>
@@ -83,11 +83,11 @@ With [visualization](./doc/README.md): ```./scripts/build-gui.sh```
 Or using [Qt Creator IDE](https://www.qt.io/download):
 
 
-Without [visualization](./doc/README.md): **Projects->Run->.*-c ../cservice_template/cfg/cservice_template.cfg -p /tmp/niias/cservice_template<br>
+Without [visualization](./doc/README.md): **Projects->Run->.*-c ../assembler_labs/cfg/assembler_labs.cfg -p /tmp/niias/assembler_labs<br>
 
 With [visualization](./doc/README.md): <br>
 - *Projects->Build->CMake->GUI->ON->Apply Configuration Changes* <br>
-- *Projects->Run->* ```-c ../cservice_template/cfg/cservice_template.cfg -p /tmp/niias/cservice_template``` <br>
+- *Projects->Run->* ```-c ../assembler_labs/cfg/assembler_labs.cfg -p /tmp/niias/assembler_labs``` <br>
 
 You can find more scripts in [scripts/](./scripts).
 
@@ -106,7 +106,7 @@ You can find more scripts in [scripts/](./scripts).
 <a name="contributing"></a>
 ## 7. Contributing
 
-1. Fork it (<http://bb.niias/projects/TOOL/repos/cservice_template/browse>).
+1. Fork it (<http://bb.niias/projects/TOOL/repos/assembler_labs/browse>).
 2. Read [Readme](./README.md), [License](./doc/LICENSE.md), [Code of Conduct](./doc/CODE_OF_CONDUCT.md) and [Condributing Guidelines][contributing].
 3. Create your fix or feature branch (`git checkout -b feature/name`).
 4. Make changes according to [Condributing Guidelines][contributing].
