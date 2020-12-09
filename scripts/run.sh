@@ -1,2 +1,2 @@
 cd build
-./cservice_template -c ../cfg/cservice_template.cfg -p /tmp/cservice_template
+./assembler_labs -c ../cfg/assembler_labs.cfg -p /tmp/assembler_labs

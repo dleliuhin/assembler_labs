@@ -1,35 +1,14 @@
 #========================================================================================
 
-project( cservice_template
-    LANGUAGES CXX )
-
-#========================================================================================
-
 cmake_minimum_required( VERSION 3.15 )
 
 #========================================================================================
 
-option( GUI FALSE )
-
-if ( GUI )
-    set( CMAKE_BUILD_TYPE "Debug" )
-    add_definitions( -DGUI )
-else()
-    set( CMAKE_BUILD_TYPE "Release" )
-endif()
+project( assembler_labs
+    LANGUAGES C ASM )
 
 #========================================================================================
 
-option( V_DEVELOP FALSE )
-
-if ( V_DEVELOP )
-    add_definitions( -DV_DEVELOP )
-endif()
-
-#========================================================================================
-
-set( CMAKE_CXX_STANDARD 17 )
-set( CMAKE_CXX_STANDARD_REQUIRED ON )
 set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
 
 #========================================================================================
@@ -45,18 +24,18 @@ include( ${CMAKE_CURRENT_SOURCE_DIR}/src/src.cmake )
 
 #========================================================================================
 
-add_executable( ${PROJECT_NAME}
-    src/main.cpp
-    ${CFG}
-    ${SRC}
-    ${EXTERNAL} )
+find_package( Curses REQUIRED )
+include_directories( ${CURSES_INCLUDE_DIR} )
 
-target_link_libraries( ${PROJECT_NAME}
-    ${VTK_LIBRARIES}
-    ${PCL_LIBRARIES}
-    ${V_LIBRARIES}
-    -lstdc++fs
-    -ldl )
+#========================================================================================
+
+add_executable( MAIN_1 src/main_1.c )
+add_executable( MAIN_2 src/main_2.c )
+add_executable( MAIN_3 src/main_3.c )
+
+target_link_libraries( MAIN_1 )
+target_link_libraries( MAIN_2 )
+target_link_libraries( MAIN_3 ${CURSES_LIBRARIES} -lncurses )
 
 #========================================================================================
 
